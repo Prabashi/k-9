@@ -1,4 +1,3 @@
-
 package com.fsck.k9.activity.setup;
 
 import android.app.Activity;
@@ -11,6 +10,8 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.fsck.k9.activity.setup.checksettings.CheckSettingsPresenter.CheckDirection;
 import timber.log.Timber;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -46,6 +47,7 @@ import java.util.Locale;
  * XXX NOTE: The manifest for this app has it ignore config changes, because
  * it doesn't correctly deal with restarting while its thread is running.
  */
+@Deprecated
 public class AccountSetupCheckSettings extends K9Activity implements OnClickListener,
         ConfirmationDialogFragmentListener{
 
@@ -54,11 +56,6 @@ public class AccountSetupCheckSettings extends K9Activity implements OnClickList
     private static final String EXTRA_ACCOUNT = "account";
 
     private static final String EXTRA_CHECK_DIRECTION ="checkDirection";
-
-    public enum CheckDirection {
-        INCOMING,
-        OUTGOING
-    }
 
     private Handler mHandler = new Handler();
 

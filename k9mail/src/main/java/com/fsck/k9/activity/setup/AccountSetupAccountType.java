@@ -4,12 +4,13 @@ package com.fsck.k9.activity.setup;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.fsck.k9.activity.setup.incoming.AccountSetupIncoming;
 import timber.log.Timber;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 import com.fsck.k9.Account;
-import com.fsck.k9.K9;
 import com.fsck.k9.Preferences;
 import com.fsck.k9.R;
 import com.fsck.k9.activity.K9Activity;
